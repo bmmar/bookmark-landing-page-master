@@ -1,0 +1,323 @@
+html {
+  background-color: white;
+  max-width: 375px;
+  margin: 5% auto;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  max-width: 375px;
+  margin: 5% auto;
+  position: relative; /* Purely so that the overlay would position within this ancestor */
+}
+
+.overlay {
+  height: 100vh;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: -40px;
+  left: 0;
+  background-color: rgba(24, 35, 54, 0.95);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 8%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.bookmark-logo-mono {
+  margin-top: 36px;
+  margin-left: 30px;
+}
+
+.closebtn {
+  margin-top: 22px;
+}
+
+.overlay a {
+  font-family: "Rubik", sans-serif;
+  padding: 24px;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #e3e3e3;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.bottom-logos {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 228px;
+  margin: 0 37%;
+}
+
+.overlay-active {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown-menu-text {
+  display: none;
+}
+
+.background-shapes {
+  max-width: 375px;
+  display: grid;
+  grid-template-columns: 3.2em 6em 5em;
+  grid-template-rows: 3.8em 10em 6em;
+}
+
+.background-shape-square {
+  margin-top: 3em;
+  width: 13rem;
+  height: 13rem;
+  background-color: hsl(231, 69%, 60%);
+  grid-column: 3;
+  grid-row: 2;
+}
+.background-shape-circle {
+  margin-top: 3em;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  background-color: hsl(231, 69%, 60%);
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.hero-image img {
+  width: 20em;
+}
+.hero-image {
+  grid-row: 2;
+}
+
+h1 {
+  text-align: center;
+  color: hsl(229, 31%, 21%);
+  grid-row: 3;
+  font-weight: 600;
+  font-size: 1.9rem;
+}
+
+.explanatory-text p {
+  color: hsl(229, 8%, 60%);
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.select-browser-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.select-browser-buttons button,
+.explanatory-text button,
+.browser-card button {
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 2% 2% 10%;
+  width: 42%;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.select-browser-buttons button:nth-child(2) {
+  color: hsl(229, 8%, 60%);
+  background-color: hsl(235, 100%, 95%);
+}
+
+.select-browser-buttons button:nth-child(1):hover {
+  border: 2px solid hsl(231, 69%, 60%);
+  background-color: white;
+  color: hsl(231, 69%, 60%);
+}
+
+.select-browser-buttons button:nth-child(2):hover {
+  border: 2px solid hsl(229, 8%, 60%);
+  background-color: white;
+  color: hsl(229, 8%, 60%);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 13%;
+  font-size: 1.45rem;
+}
+
+.features-heading {
+  margin-top: 35%;
+}
+
+.feature-text {
+  text-align: center;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin: 4% 0;
+}
+
+.h-line {
+  width: 80%;
+  height: 1px;
+  background-color: black;
+  margin: 0 auto;
+}
+
+.overlay-line {
+  background-color: hsl(229, 8%, 60%);
+}
+
+.feature-selected-line {
+  width: 35%;
+  background-color: red;
+  height: 4px;
+  margin: 0 auto;
+  display: none;
+}
+
+.feature-selected-line:hover {
+  display: block;
+}
+
+.features-tab-1,
+.features-tab-2,
+.features-tab-3 {
+  display: none;
+}
+
+.background-shape-square-two {
+  grid-column: 1;
+}
+
+.background-shape-circle-two {
+  grid-column: 2;
+  margin-left: 37%;
+}
+
+.features-illustration img {
+  width: 17em;
+}
+.features-illustration {
+  grid-row: 2;
+  grid-column: 2;
+  margin-left: -22%;
+  margin-top: 29%;
+}
+
+button.more-info {
+  margin-left: 29%;
+}
+
+.browser-card {
+  width: 74%;
+  box-shadow: 0 5px 8px 0px rgb(0 0 0 / 20%);
+  margin: 0 auto;
+  /* height: 22rem; */
+  border-radius: 10px;
+  margin-bottom: 25%;
+}
+
+.browser-logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 25%;
+}
+
+.background-dots {
+  margin-top: 16%;
+}
+
+.browser-card button {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 8%;
+}
+
+.FAQ-questions {
+  font-size: 1rem;
+  margin: 5% 0;
+  cursor: pointer;
+}
+
+.FAQ-questions:hover {
+  color: red;
+}
+
+.FAQ-questions img {
+  float: right;
+}
+
+.explanatory-text-faqs p {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 15% 0;
+}
+
+.h-line-faqs {
+  width: 100%;
+}
+
+.FAQ-answers {
+  font-size: 0.9rem;
+  color: hsl(229, 8%, 60%);
+  line-height: 1.8rem;
+  margin-bottom: 5%;
+  display: none;
+}
+
+.arrow {
+  color: hsl(231, 69%, 60%);
+}
+
+.up-arrow {
+  transform: rotate(180deg);
+  display: none;
+}
+
+.display-active {
+  display: block;
+}
+
+.display-inactive {
+  display: none;
+}
+
+/**************** Footer **************/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
